@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  ipsec:
+    image: philplckthun/strongswan
+    ports:
+      - "500:500/udp"
+      - "4500:4500/udp"
+    volumes:
+      - ./ipsec.conf:/etc/ipsec.d/ipsec.conf
+      - ./ipsec.secrets:/etc/ipsec.d/ipsec.secrets
+    privileged: true
+    restart: always
