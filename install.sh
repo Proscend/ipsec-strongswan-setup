@@ -49,4 +49,4 @@ if [ ! -e ".git" ]; then
     cd ~/ipsec-strongswan-setup
 fi
 
-source ./start.sh
+./start.sh
